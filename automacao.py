@@ -9,7 +9,7 @@ pyautogui.PAUSE = 0.5 # pause de 0,5 segundos entre os comandos
 pyautogui.press("win")
 pyautogui.write("chrome")
 pyautogui.press("enter")
-pyautogui.click(x=699, y=493) # seleciona o primeiro usuario do chrome
+pyautogui.click(x=699, y=493) 
 
 # 2° passo: entrar no link e fazer o login
 
@@ -33,6 +33,7 @@ print(tabela)
 for linha in tabela.index:
     pyautogui.click(x=688, y=295)
     # pega da tabela o valor do campo que a gente quer preencher
+    #primeiro argumento é a linha e o segundo é a coluna
     codigo = tabela.loc[linha, "codigo"]
     pyautogui.write(codigo)
     pyautogui.press("tab")
@@ -63,4 +64,4 @@ for linha in tabela.index:
 
     pyautogui.press("tab")
     pyautogui.press("enter") # para clicar no botão
-    pyautogui.scroll(10000)
+    pyautogui.scroll(10000) # rola a página até o topo
